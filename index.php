@@ -21,11 +21,10 @@
                 </div>
                 <form class="fr" method="POST" action="<?php $_SERVER['PHP_SELF'];?>" >
                     <div class="mb-3e mb-m">
-                        <select name="devise1" class="sel dev1" id="dev1">
-                            <option value="EUR">EUR</option>   
-                        <?php foreach($symbol as $sy){ ?>    
-                            <option value="<?php echo $sy;?>" <?= !empty($_POST) && $_POST['devise1'] == $sy ? 'selected' : '' ?>><?php echo $sy;?></option>
-                        <?php } ?>           
+                        <select name="devise1" class="sel dev1" id="dev1">   
+                            <?php foreach($symbol as $sy){ ?>    
+                                <option value="<?php echo $sy;?>" <?= !empty($_POST) && $_POST['devise1'] == $sy ? 'selected' : '' ?>><?php echo $sy;?></option>
+                            <?php } ?>           
                         </select>
                         <div class="inpt_l">
                             <label class="form-labele label_before " id="label_e" for="ent">MONTANT D'entré:</label>
@@ -39,10 +38,9 @@
                     </div>
                     <div class="mb-3e mb-p">
                         <select name="devise2" class="sel dev2" id="dev2">
-                            <option value="EUR">EUR</option>
-                        <?php foreach($symbol as $sy){ ?>    
-                            <option value="<?php echo $sy;?>" <?= !empty($_POST) && $_POST['devise2'] == $sy ? 'selected' : '' ?>><?php echo $sy;?></option>
-                        <?php } ?>                    
+                            <?php foreach($symbol as $sy){ ?>    
+                                <option value="<?php echo $sy;?>" <?= !empty($_POST) && $_POST['devise2'] == $sy ? 'selected' : '' ?>><?php echo $sy;?></option>
+                            <?php } ?>                    
                         </select>
                         <div class="inpt_l">
                             <label class="form-labele label_before label_after" id="label_s" for="srt">MONTANT de sortie</label>
