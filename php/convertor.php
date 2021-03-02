@@ -1,8 +1,7 @@
 <?php
 include "data.php";
-function convertor($sel1,$sel2,$val){
+$convertor=function($sel1,$sel2,$val) use($symbol,$equiv){
     $tmp=0;
-    global $symbol,$equiv;
     if($sel1=="EUR"){
       $i=array_search($sel2,$symbol);
       echo $val*$equiv[$i];
@@ -17,5 +16,5 @@ function convertor($sel1,$sel2,$val){
           echo $tmp*$val;
        }
     }
- }
+ };
 ?>
