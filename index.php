@@ -22,7 +22,7 @@
                 </div>
                 <form class="fr" method="POST" action="<?php $_SERVER['PHP_SELF'];?>" >
                     <div class="mb-3e mb-m">
-                        <?php select("devise1","dev1");?>
+                        <?php $select("devise1","dev1");?>
                         <div class="inpt_l">
                             <label class="form-labele label_before " id="label_e" for="ent">MONTANT D'entré:</label>
                             <input type="number" step="any" class="inpute txt" id="ent" name="ent" value=<?php echo ((empty($_POST['ent'])) ? " ": $_POST['ent']);?> />
@@ -34,7 +34,7 @@
                         </button>
                     </div>
                     <div class="mb-3e mb-p"> 
-                        <?php select("devise2","dev2"); ?>                    
+                        <?php $select("devise2","dev2"); ?>                    
                         <div class="inpt_l">
                             <label class="form-labele label_before label_after" id="label_s" for="srt">MONTANT de sortie</label>
                             <input type="number" name="srt" step="0.001" id="srt" disabled class="inpute pass" value=<?php if(isset($_POST['submit'])){$convertor($_POST['devise1'],$_POST['devise2'],$_POST['ent']);}?> />
