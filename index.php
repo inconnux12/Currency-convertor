@@ -37,7 +37,7 @@
                         <?php select("devise2","dev2"); ?>                    
                         <div class="inpt_l">
                             <label class="form-labele label_before label_after" id="label_s" for="srt">MONTANT de sortie</label>
-                            <input type="number" name="srt" step="0.001" id="srt" disabled class="inpute pass" value=<?php if(isset($_POST['submit'])){convertor($_POST['devise1'],$_POST['devise2'],$_POST['ent']);}?> />
+                            <input type="number" name="srt" step="0.001" id="srt" disabled class="inpute pass" value=<?php if(isset($_POST['submit'])){$convertor($_POST['devise1'],$_POST['devise2'],$_POST['ent']);}?> />
                         </div>
                     </div>
                     <div class="mb-3e">
